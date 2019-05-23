@@ -1,0 +1,21 @@
+stages:
+- name: Compile
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: |-
+        npm install
+        npm run build
+- name: Docker
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: serg470/sentiment-analysis-frontend:kuber
+      registry: 127.0.0.1:34259
+- name: Deploy
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
+timeout: 60
+notification: {}
