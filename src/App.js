@@ -20,7 +20,7 @@ class App extends Component {
     };
 
     analyzeSentence() {
-        fetch('http://webapp.sa.192.168.1.133.xip.io/sentiment', {
+        fetch('http://webapp.sa.192.168.1.103.xip.io/sentiment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
