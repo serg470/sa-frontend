@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    field.cattle.io/creatorId: user-js2ch
+    field.cattle.io/ingressState: '{"ZnJvbnRlbmQvc2EveGlwLmlvLy8vODA=":"deployment:sa:sentiment-analysis-frontend"}'
+  creationTimestamp: "2019-05-23T10:41:18Z"
+  generation: 1
+  labels:
+    cattle.io/creator: norman
+  name: frontend
+  namespace: sa
+  resourceVersion: "41525"
+  selfLink: /apis/extensions/v1beta1/namespaces/sa/ingresses/frontend
+  uid: 4c19e745-7d47-11e9-963c-080027b2e727
+spec:
+  rules:
+  - host: xip.io
+    http:
+      paths:
+      - backend:
+          serviceName: ingress-717af44d09105b129e2f5502b8737a9e
+          servicePort: 80
+        path: /
+status:
+  loadBalancer: {}
