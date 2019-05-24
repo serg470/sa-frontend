@@ -21,8 +21,10 @@ spec:
       labels:
         workload.user.cattle.io/workloadselector: deployment-sa-sentiment-analysis-frontend
     spec:
+      imagePullSecrets:
+      - name: pipeline-docker-registry
       containers:
-      - image: serg470/sentiment-analysis-frontend:runcher
+      - image: sentiment-analysis-frontend:runcher
         imagePullPolicy: Always
         name: sentiment-analysis-frontend
         ports:

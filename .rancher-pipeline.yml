@@ -11,7 +11,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: serg470/sentiment-analysis-frontend:runcher
+      tag: sentiment-analysis-frontend:runcher
 - name: Deploy
   steps:
   - applyYamlConfig:
