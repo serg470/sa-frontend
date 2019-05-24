@@ -11,12 +11,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-<<<<<<< HEAD
-      tag: sentiment-analysis-frontend:runcher
-=======
-      tag: localhost:5001/sentiment-analysis-frontend:runcher
-      registry: 127.0.0.1:34783
->>>>>>> d4dd95dffe3adca868d21e3dcf4358e448e45c9f
+      tag: sentiment-analysis-frontend:${CICD_EXECUTION_SEQUENCE}
 - name: Deploy
   steps:
   - applyYamlConfig:

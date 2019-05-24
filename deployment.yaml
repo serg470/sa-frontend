@@ -24,7 +24,7 @@ spec:
       imagePullSecrets:
       - name: pipeline-docker-registry
       containers:
-      - image: sentiment-analysis-frontend:runcher
+      - image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
         imagePullPolicy: Always
         name: sentiment-analysis-frontend
         ports:
