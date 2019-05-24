@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: sentiment-analysis-frontend
+  name: sa-frontend-scale
   namespace: sa
 spec:
   scaleTargetRef:

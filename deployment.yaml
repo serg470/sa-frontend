@@ -35,7 +35,13 @@ spec:
         - containerPort: 80
           name: 80tcp301141
           protocol: TCP
-        resources: {}
+        resources: 
+          limits:
+            memory: 512Mi
+            cpu: 500m
+          requests:
+            memory: 256Mi
+            cpu: 100m
         securityContext:
           allowPrivilegeEscalation: false
           capabilities: {}
