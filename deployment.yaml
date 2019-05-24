@@ -22,7 +22,7 @@ spec:
         workload.user.cattle.io/workloadselector: deployment-sa-sentiment-analysis-frontend
     spec:
       containers:
-      - image: serg470/sentiment-analysis-frontend:kuber
+      - image: serg470/sentiment-analysis-frontend:runcher
         imagePullPolicy: Always
         name: sentiment-analysis-frontend
         ports:
