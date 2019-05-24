@@ -11,7 +11,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: serg470/sentiment-analysis-frontend:kuber
+      tag: serg470/sentiment-analysis-frontend:runcher
       registry: 127.0.0.1:34259
 - name: Deploy
   steps:
