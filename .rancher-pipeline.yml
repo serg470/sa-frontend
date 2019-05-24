@@ -12,7 +12,8 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: serg470/sentiment-analysis-frontend:runcher
-      registry: 127.0.0.1:34259
+      pushRemote: true
+      registry: 127.0.0.1:34783
 - name: Deploy
   steps:
   - applyYamlConfig:
